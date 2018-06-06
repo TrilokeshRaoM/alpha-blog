@@ -1,0 +1,26 @@
+<%if @article.errors.any?%>
+  <h2>These are the errors that are preventing you to edit the article</h2>
+  <ul>
+    <!--Here we are pulling the errors for that instance of the article object. This can be achieved in irb-->
+    <%@article.errors.full_messages.each do |e|%>
+    <li>
+      <%=e%>
+    </li>
+    <%end%>
+  </ul>
+<%end%>
+<!--The symbols that are in the form are the columns that are present in the schema-->
+<%=form_for @article do |f|%>
+<p>
+  <%=f.label :name%><br/>
+  <%= f.text_field :name%>
+</p>
+<p>
+  <%=f.label :description%><br/>
+  <%=f.text_area :description%>
+</p>
+<p>
+<%=f.submit%>
+</p>
+  <%=link_to "Back to index",articles_path%>
+<%end%>

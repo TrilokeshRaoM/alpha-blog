@@ -1,0 +1,21 @@
+<h1>This is all the articles</h1>
+
+<Table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <p>
+    <%= link_to "Create new article",new_article_path%>
+  </p>
+  <%@articles.each do |article|%>
+    <tr>
+      <td><%=article.name%></td>
+      <td><%=article.description%></td>
+      <!--Here we will put the link of the edit and show article. We are passing the article variables as it contains that instance of the article -->
+      <td><%=link_to "Edit",edit_article_path(article)%></td>
+      <td><%=link_to "Show",article_path(article)%></td>
+      <td><%=link_to "Destroy",article_path(article),method: :delete,data:{confirm: "Are you sure?"}%></td>
+    </tr>
+  <%end%>
+</Table>
