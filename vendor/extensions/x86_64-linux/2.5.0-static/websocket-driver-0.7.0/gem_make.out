@@ -1,0 +1,15 @@
+current directory: /home/tri/workspace/alpha-blog/vendor/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/tri/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180608-15740-p66s4c.rb extconf.rb
+creating Makefile
+
+current directory: /home/tri/workspace/alpha-blog/vendor/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/tri/workspace/alpha-blog/vendor/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/tri/workspace/alpha-blog/vendor/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20180608-15740-1w8tvgm
