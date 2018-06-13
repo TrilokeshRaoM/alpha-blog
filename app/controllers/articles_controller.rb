@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
   def create
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
+    #We include the user manually here because we would like to enter articles via the console. Since we have not created the user authentication it cannot take the user id from that
+    @article.user = User.first
     if @article.save
       flash[:notice] = "Article was successfully created"
       redirect_to article_path(@article)
